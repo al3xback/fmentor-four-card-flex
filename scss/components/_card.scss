@@ -13,6 +13,14 @@
 	@include mix.border-radius(8px);
 }
 
+.card__content,
+.card__group,
+.card__block,
+.card__item {
+	@include mix.flexbox;
+	@include mix.flex-direction(column);
+}
+
 .card__content {
 	padding-top: func.em(40, var.$font-size-primary);
 	margin-bottom: func.em(76, var.$font-size-primary);
@@ -31,15 +39,11 @@
 
 .card__group,
 .card__block {
-	@include mix.flexbox;
-	@include mix.flex-direction(column);
 	gap: func.em(24, var.$font-size-primary);
 }
 
 .card__item {
 	position: relative;
-	@include mix.flexbox;
-	@include mix.flex-direction(column);
 	min-height: func.em(220, var.$font-size-primary);
 	padding: func.em(24, var.$font-size-primary);
 	background-color: var.$color-white;
@@ -116,7 +120,6 @@
 	}
 
 	.card__group {
-		@include mix.flexbox;
 		@include mix.flex-direction(row);
 	}
 
